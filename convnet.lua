@@ -2,7 +2,7 @@ require "nn"
 require "optim"
 matio = require "matio"
 
---[[
+
 net = nn.Sequential()
 net:add(nn.Reshape(3, 32, 32))
 net:add(nn.SpatialConvolution(3, 6, 4, 4, 1, 1, 1, 1))
@@ -92,8 +92,6 @@ end
 
 
 print (confusion)
-
-]]--
 
 
 net = torch.load("convnet.th")
